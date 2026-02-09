@@ -372,32 +372,50 @@
     </style>
 </head>
 <body>
-    <!-- Control Panel -->
-    <div class="control-panel">
-        ...
-    </div>
 
-    <!-- VIDEO STAGE (9:16) -->
-    <div class="video-container" id="videoContainer">
+    <div class="app-container">
 
-        <!-- Background Video -->
-        <video 
-            class="background-video" 
-            id="backgroundVideo"
-            src="https://d1yei2z3i6k35z.cloudfront.net/11264552/698a56d53cee4_hoot-background-loop.mp4"
-            autoplay
-            loop
-            muted
-            playsinline
-        ></video>
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <h1>🦉 HOOT! Anagram Animator</h1>
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <label for="inputA">Original Word/Phrase:</label>
+                    <input type="text" id="inputA" maxlength="25" value="SKATEBOARD">
+                </div>
+                <div class="input-wrapper">
+                    <label for="inputB">Anagram:</label>
+                    <input type="text" id="inputB" maxlength="25" value="ROAD BE TASK">
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="btn-start" id="btnStart">▶ Start Animation</button>
+                <button class="btn-stop" id="btnStop">⏹ Stop</button>
+            </div>
+            <div class="status-text" id="status">Enter your words and click Start!</div>
+        </div>
 
-        <!-- Anagram Stage - Letters render here on top of video -->
-        <div class="anagram-stage">
-            <div class="letter-container" id="letterContainer"></div>
+        <!-- VIDEO STAGE -->
+        <div class="video-container" id="videoContainer">
+            <video
+                class="background-video"
+                id="backgroundVideo"
+                src="https://d1yei2z3i6k35z.cloudfront.net/11264552/698a56d53cee4_hoot-background-loop.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+            ></video>
+
+            <div class="anagram-stage">
+                <div class="letter-container" id="letterContainer"></div>
+            </div>
         </div>
 
     </div>
+
 </body>
+
 
     <script>
         /* ============================================
@@ -949,6 +967,7 @@
     </script>
 </body>
 </html>
+
 
 
 
