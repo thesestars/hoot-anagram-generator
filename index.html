@@ -165,16 +165,19 @@
            VIDEO CONTAINER (9:16 aspect ratio)
            ============================================ */
         .video-container {
-            width: 100%;
-            max-width: 405px; /* 720px * 9/16 */
-            aspect-ratio: 9 / 16;
-            margin: 0px auto;
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-            background: #000;
-        }
+    width: 100%;
+    max-width: 405px;
+
+    height: 720px;            /* ⬅ FORCE FULL 9:16 HEIGHT */
+    max-height: 100vh;        /* ⬅ safety for small screens */
+
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    background: #000;
+}
 
         /* ============================================
            BACKGROUND VIDEO
@@ -984,6 +987,7 @@
     </script>
 </body>
 </html>
+
 
 
 
